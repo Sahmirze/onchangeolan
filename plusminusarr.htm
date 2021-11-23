@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      let  arr = [-4, 3, -9, 0, 4, 1]
+      let n=arr.length
+      let a1=0
+      let a2=0
+      let a3=0
+      let a4=0
+      for(let i=0;i<n;i++){
+          if(arr[i]>0 && arr[i]!=1) a1+=arr[i]/n
+          else if(arr[i]==1) {a3=arr.indexOf(1)
+            a4=arr[a3]/6
+          }
+          else if(arr[i]<0 ) a2+=arr[i]/n
+         
+      }
+     console.log(a1)
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{text-align: center;}
+        #deyer{box-sizing: border-box; width: 320px;}
+        #slider {
+                width: 80%;
+                height: 100vh;
+                margin: 10vh auto;
+                box-shadow: 0 0 10px #333;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                transition: all  2s;
+            }
+    </style>
+</head>
+<body>
+
+    <button onclick="left()"><<</button>
+    <input type="text" name="" id="deyer">
+    <button onclick="right()">>></button>
+    <script>
+        const deyer=document.getElementById("deyer")
+        let x=140
+        deyis()
+        function left(){
+            x-=20
+            deyis()
+        }
+        function right(){
+            x+=20
+            deyis()
+        }
+        function deyis(){
+            deyer.style.paddingLeft=x+ "px"
+        }
+
+    </script>
+    <div id="slider">
+     <button onclick="sol()"> ⏴ </button>
+     <button onclick="sag()"> ⏵ </button>
+    </div>
+     <script>
+         const slider=document.getElementById("slider")
+         x=1
+         deyis()    
+        function sol(){
+            if(x>1)x--
+            else x=9
+            deyis()
+        }
+        function sag(){
+            if(x<9 )x++
+            else x=1
+            deyis()
+        }
+    
+        function deyis(){
+          slider.style.background="url('img/"+ x +".jpg') center/cover"
+            
+        }
+     </script>
+</body>
+</html>

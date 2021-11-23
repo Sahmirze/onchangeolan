@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+   
+    <script>
+       let value =1234
+     let sum = 0;
+     let count=value.toString().length-1;
+     console.log(count)
+     while(count>0){
+       sum+=Math.floor(value/(10**count))
+       value=value%(10**count)
+         count--
+     }
+      console.log(sum)
+    </script>
+</body>
+</html>

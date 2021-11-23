@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+        body{
+           
+            background: url("4.jpg") top/cover no-repeat;
+        }
+    </style>
+</head>
+<body>
+<input type="a" name="" id="a">
+<button onclick="Ok()">OK</button>
+<div id="netice"></div>
+    <script>
+const a=document.getElementById("a")
+const netice=document.getElementById("netice")
+function Ok(){ 
+    netice.innerHTML = a.value.split("").reverse().join("")
+}
+</script>
+<br>
+<div>Ikinci</div>
+<br>
+<input type="text" name="" id="b" maxlength="3">
+<button onclick="Oho()"> Ok</button>
+<div id="answer"></div>
+<script>
+    const b=document.getElementById("b")
+    const answer=document.getElementById("answer")
+     function Oho(){
+         answer.innerHTML=b.value.slice(1)+b.value.slice(0,1)
+     }
+    
+</script>
+<br>
+<br> 
+    <input type="text" name="" id="c" maxlength="3">
+    <button onclick="Paho()">OK</button>
+    <div id="nese"></div>
+    <script>
+        const c=document.getElementById("c")
+        const nese=document.getElementById("nese")
+        function Paho(){
+            nese.innerHTML=c.value.slice(1,2)+c.value.slice(2)+c.value.slice(0,1)
+        }
+    </script>
+    <br>
+    <br>
+    <input type="text" name="" id="f" maxlength="5">
+    <button onclick="hesab()">Ok</button>
+    <div id="deyis"></div>
+    <script>
+        const f=document.getElementById("f")
+        const deyis = document.getElementById("deyis")
+        function hesab(){
+            let a1=+f.value.slice(0,1)
+            let a2=+f.value.slice(1,2)
+            let a3=+f.value.slice(3,4)
+            let a4=+f.value.slice(4)
+            deyis.innerHTML=(a1+a2)-(a3+a4)
+        }
+    </script>
+</body>
+</html>

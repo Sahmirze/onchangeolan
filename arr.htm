@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{text-align: center;}
+    
+        #slider {
+                width: 100%;
+                height: 100vh;
+                margin: 10vh auto;
+                box-shadow: 0 0 10px #333;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                transition: all  2s;
+            }
+    </style>
+</head>
+<body>
+
+
+    <div id="slider">
+     <button onclick="sol()"> ⏴ </button>
+     <button onclick="sag()"> ⏵ </button>
+    </div>
+     <script>
+         const slider=document.getElementById("slider")
+         let arr=["img/1.jpg","img/2.jpg","img/image1.png","img/image2.png","10.jpg","10.png"]
+         x=0
+         deyis()    
+        function sol(){
+            if(x>0)x--
+            else x=arr.length
+            deyis()
+        }
+        function sag(){
+            if(x<arr.length )x++
+            else x=0
+            deyis()
+        }
+        
+        function deyis(){
+          slider.style.background=`url(${arr[x]}) center/cover`
+          
+        }
+     </script>
+</body>
+</html>

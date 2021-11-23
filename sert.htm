@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="a">
+    <button onclick="hesab()">OK</button>
+    <div id="netice"></div>
+    <script>
+        const a=document.getElementById("a")
+        const netice=document.getElementById("netice")
+        function hesab(){
+        if(a.value%2) netice.innerHTML="sizin daxil etdiyiniz tekdir ededdir"
+        else if (a.value==0) netice.innerHTML="sizin daxil etdiyiniz eded ne tekdir ne de cut"
+        else netice.innerHTML="sizin daxil etdiyiniz cut ededdir" 
+        }
+    </script>
+    <br>
+    <br>
+        <input type="text" name="" id="b">
+        <input type="text" name="" id="c">
+        <button onclick="bax()">OK</button>
+        <div id="nese"></div>
+        <script>
+               const b=document.getElementById("b")
+               const c=document.getElementById("c")
+               const nese=document.getElementById("nese")
+               
+               function bax(){
+                   let cavab=""
+                 if(+b.value>+c.value){nese.innerHTML="sizin daxil etdiyiniz ededlerden "+b.value+" daha boyukdur"} 
+                 else if (+c.value>+b.value){ nese.innerHTML="sizin daxil etdiyiniz ededlerden "+c.value +" daha boyukdur"}
+                 else nese.innerHTML= "sizin daxil etdiyiniz ededler beraberdir"
+               }
+        </script>
+        <br>
+        <br>
+            <input type="text" name="" id="d">
+            <input type="text" name="" id="f">
+            <button onclick="yoxla()">OK</button>
+            <div id="evezle"></div>
+            <script>
+                const d=document.getElementById("d")
+                const f=document.getElementById("f")
+                const evezle=document.getElementById("evezle")
+                   function yoxla(){
+                     if (d.value>f.value){}
+                     else if(f.value>d.value){}
+                     else alert("xeta eyni eded daxil eteyin")  
+                   }
+            </script>
+</body>
+</html>

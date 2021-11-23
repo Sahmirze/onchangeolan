@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <img src="" name="slider" width="240px" height="240px">
+    <script>
+        let i=0
+        let arr=[]
+        let time=3000
+        arr[0]="image1.png"
+        arr[1]="image2.png"
+     
+        function slide(){
+            document.slider.src=arr[i]
+            if(i<arr.length-1){
+                i++
+            }
+            else{
+                i=0
+            }
+            setTimeout(slide,time)
+            
+        }
+        window.onload= slide
+ 
+    </script>
+</body>
+</html>

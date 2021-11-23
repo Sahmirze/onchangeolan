@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <select id="slc" onchange="val()"></select><br>
+
+    <input type="text" id="bar" value="">
+
+    <script>
+        let arr=["Mercedes","bmw","rang rover","lexus","porsche","rolls royce"]
+        let slc=document.getElementById("slc")
+        let bar=document.getElementById("bar")
+
+        let kod=""
+        for(let i=0;i<arr.length;i++){
+            kod+=`<option>${arr[i].toUpperCase()}</option>`
+        }
+        slc.innerHTML=kod
+
+        function val(){
+            bar.value = slc.value
+        }
+    </script>  
+    </body>
+</html>
